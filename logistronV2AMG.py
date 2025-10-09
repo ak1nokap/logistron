@@ -36,10 +36,10 @@ async def main():
             print(f"❌ Ошибка в {group}: {e}")
             failed_groups.append(group)
 
-        # Рандомная задержка (3–8 секунд)
-        # delay = random.randint(3, 8)
-        # print(f"⏳ Ждём {delay} сек...")
-        # await asyncio.sleep(delay)
+        #Рандомная задержка (3–8 секунд)
+        delay = random.randint(3, 8)
+        print(f"⏳ Ждём {delay} сек...")
+        await asyncio.sleep(delay)
 
         print("\n📊 Результаты:")
         print(f"Успешно: {len(groups) - len(failed_groups)}")
