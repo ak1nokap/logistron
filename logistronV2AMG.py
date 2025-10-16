@@ -1,10 +1,14 @@
 import asyncio
 import random
 from telethon import TelegramClient
+from dotenv import load_dotenv
+import os
 
-# ⚡ Данные API (с сайта https://my.telegram.org)
-api_id = 23506845
-api_hash = "a015ff48c31ca309a5ef6543f8fe65dd"
+# Загружаем .env
+load_dotenv()
+
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
 
 client = TelegramClient("session_name", api_id, api_hash)
 
